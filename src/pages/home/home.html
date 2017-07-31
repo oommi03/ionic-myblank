@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    
+              <!--<meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">-->
+  <ion-title>
+      Ionic Blank
+    </ion-title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+ 
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+
+    </button>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+ {{fullname}}
+  <ion-item>
+    <ion-label stacked >Your name</ion-label>
+    <ion-input type="text" [(ngModel)]="fullname"></ion-input>
+  </ion-item>
+  
+   <ion-item>
+    <ion-label stacked>Phone Number</ion-label>
+    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <button ion-item (click)="showName(item)" *ngFor="let item of group">
+      {{item.id}} {{item.name}}
+    </button>
+  </ion-list>
+
+</ion-content>
